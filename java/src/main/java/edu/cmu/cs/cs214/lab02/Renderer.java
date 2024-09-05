@@ -3,7 +3,7 @@ package edu.cmu.cs.cs214.lab02;
 import edu.cmu.cs.cs214.lab02.shapes.*;
 import org.w3c.dom.css.Rect;
 
-public class Renderer<Shape> {
+public class Renderer {
     //    private Rectangle rectangle;
     private Shape shape;
 
@@ -36,14 +36,15 @@ public class Renderer<Shape> {
 //        return this.rectangle;
 //    }
     public void draw() {
-        double area = 0.0;
-        if(this.shape instanceof Rectangle) {
-            area = ((Rectangle) this.shape).getArea();
-        }
-        if(this.shape instanceof Circle) {
-            area = ((Circle) this.shape).getArea();
-        }
+//        double area = 0.0;
+//        if(this.shape instanceof Rectangle) {
+//            area = ((Rectangle) this.shape).getArea();
+//        }
+//        if(this.shape instanceof Circle) {
+//            area = ((Circle) this.shape).getArea();
+//        }
         // assume implementation
+        double area = shape.getArea();
 
         System.out.println("Shape printed\n" + "Its area is " + area);
     }
